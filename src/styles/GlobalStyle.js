@@ -4,7 +4,7 @@ const GlobalStyle = createGlobalStyle`
   #root {
     max-width: 1280px;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 70px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-padding: 0;
+    padding: 0;
     min-width: 320px;
     min-height: 100vh;
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

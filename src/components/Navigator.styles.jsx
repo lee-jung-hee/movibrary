@@ -12,7 +12,7 @@ export const NavigatorContainer = styled.nav`
   left: 0;
 `;
 
-export const NavigatorLogo = styled.a`
+export const NavigatorLogo = styled.span`
   color: #d61f3d;
   margin: 0 20px;
   cursor: pointer;

@@ -1,16 +1,16 @@
-import { movieList } from "../api/movieList";
+import { useSelector } from "react-redux";
 import MovieCard from "../components/MovieCard";
-import Navigator from "../components/Navigator";
 
 function Main() {
+  const movie = useSelector((state) => state.movie.results);
   return (
     <>
-      {movieList.map((list) => (
+      {movie.map((list) => (
         <MovieCard
           key={list.id}
           id={list.id}
           url={list.backdrop_path}
-          title={list.original_title}
+          title={list.title}
           rating={list.vote_average}
         />
       ))}

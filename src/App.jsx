@@ -1,17 +1,16 @@
 import { Route, Routes } from "react-router-dom";
 import Main from "./pages/Main";
 import MovieDetail from "./pages/MovieDetail";
-import Navigator from "./components/Navigator";
+import Layout from "./components/Layout";
 
 function App() {
   return (
-    <>
-      <Navigator />
-      <Routes>
-        <Route path="/" element={<Main />} />
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Main />} />
         <Route path="/detail/:id" element={<MovieDetail />} />
-      </Routes>
-    </>
+      </Route>
+    </Routes>
   );
 }
 

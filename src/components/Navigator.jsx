@@ -5,7 +5,7 @@ function Navigator() {
   return (
     <Link to="/">
       <NavigatorContainer>
-        <NavigatorLogo>Movibrary</NavigatorLogo>
+        <NavigatorLogo>⬤ Movibrary</NavigatorLogo>
       </NavigatorContainer>
     </Link>
   );

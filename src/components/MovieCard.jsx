@@ -22,5 +22,3 @@ function MovieCard({ id, url, title, rating }) {
 }
 
 export default MovieCard;
-
-// 이밎, 제목, 평점 정보

@@ -9,6 +9,7 @@ export const MovieCardContainer = styled.div`
   flex-direction: column;
   background-color: white;
   margin: 5px;
+  cursor: pointer;
 `;
 
 export const MovieCardImg = styled.img`
