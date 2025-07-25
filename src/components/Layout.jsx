@@ -1,11 +1,12 @@
 import { Outlet } from "react-router-dom";
 import Navigator from "./Navigator";
 import { Suspense } from "react";
+import SkeletonUI from "./SkeletonUI";
 function Layout() {
   return (
     <>
       <Navigator />
-      <Suspense fallback={<h1>WELCOME TO MOVIBRARY</h1>}>
+      <Suspense fallback={<SkeletonUI />}>
         <Outlet />
       </Suspense>
     </>

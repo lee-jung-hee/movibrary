@@ -10,7 +10,7 @@ import {
   Date,
   Description,
   MovieInfoContainer,
-} from "./MovieDetail.styles";
+} from "../styles/MovieDetail.styles";
 
 function MovieDetail() {
   const { id } = useParams();

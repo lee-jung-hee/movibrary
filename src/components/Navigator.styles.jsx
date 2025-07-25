@@ -19,4 +19,10 @@ export const NavigatorLogo = styled.span`
   font-size: 30px;
   font-weight: 800;
   transform: translate(0, -3px);
+
+  @media (max-width: 828px) {
+    .logo-text {
+      display: none;
+    }
+  }
 `;
