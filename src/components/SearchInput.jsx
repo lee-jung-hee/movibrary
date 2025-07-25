@@ -7,7 +7,7 @@ function SearchInput() {
   return (
     <SearchInputText
       onChange={(e) =>
-        navigator(`/search?movie=${e.target.value.toLocaleLowerCase()}`)
+        navigator(`/search?movie=${e.target.value.toLowerCase()}`)
       }
       type="text"
       placeholder="Enter movie title"

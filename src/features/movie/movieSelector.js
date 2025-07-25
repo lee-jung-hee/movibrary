@@ -9,5 +9,6 @@ export const selectMovie = (movieId) =>
 export const selectSearchMovie = (movieTitle) =>
   createSelector(
     (state) => state.movie.data,
-    (movie) => movie.results.filter((el) => el.title.match(movieTitle))
+    (movie) =>
+      movie.results.filter((el) => el.title.toLowerCase().match(movieTitle))
   );

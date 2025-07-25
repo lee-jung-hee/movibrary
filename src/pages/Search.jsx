@@ -13,7 +13,7 @@ function Search() {
 
   const filteredMovies = useSelector((state) =>
     debouncedSearchTerm
-      ? selectSearchMovie(debouncedSearchTerm.toLocaleLowerCase())(state)
+      ? selectSearchMovie(debouncedSearchTerm.toLowerCase())(state)
       : allMovies
   );
 
