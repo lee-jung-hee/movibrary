@@ -5,6 +5,7 @@ const movieSlice = createSlice({
   name: "movie",
   initialState: {
     data: {},
+
     loading: true,
     error: null,
   },

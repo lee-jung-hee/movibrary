@@ -1,11 +1,11 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import popularMovie from "../../api/movieList";
+import { popularMovies } from "../../api/movieList";
 
 export const fetchPopularMovie = createAsyncThunk(
   "movie/fetchPopularMovie",
   async (_, { rejectWithValue }) => {
     try {
-      const response = await popularMovie();
+      const response = await popularMovies();
       const nonAdultPopularMovies = response.results.filter(
         (movie) => movie.adult === false
       );
