@@ -6,6 +6,7 @@ export const MovieDetailContainer = styled.div`
   gap: 16px;
   width: 100%;
   max-width: 900px;
+  height: 450px;
   margin: 0 auto;
   background-color: white;
   color: #141a21;
@@ -14,6 +15,7 @@ export const MovieDetailContainer = styled.div`
 export const Poster = styled.img`
   width: 100%;
   height: auto;
+  min-height: 270px;
   grid-row: span 3;
   object-fit: cover;
   margin: 5px;
