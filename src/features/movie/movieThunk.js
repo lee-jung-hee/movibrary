@@ -9,7 +9,7 @@ export const fetchPopularMovie = createAsyncThunk(
       const nonAdultPopularMovies = response.results.filter(
         (movie) => movie.adult === false
       );
-      return { nonAdultPopularMovies };
+      return { ...response, results: nonAdultPopularMovies };
     } catch (err) {
       return rejectWithValue(err.toString());
     }
