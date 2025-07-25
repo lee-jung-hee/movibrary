@@ -1,9 +1,19 @@
 import { Route, Routes } from "react-router-dom";
-import Main from "./pages/Main";
-import MovieDetail from "./pages/MovieDetail";
+import { lazy, useEffect } from "react";
+const Main = lazy(() => import("./pages/Main"));
+const MovieDetail = lazy(() => import("./pages/MovieDetail"));
+
 import Layout from "./components/Layout";
+import { useDispatch } from "react-redux";
+import { fetchPopularMovie } from "./features/movie/movieThunk";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchPopularMovie());
+  }, []);
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
