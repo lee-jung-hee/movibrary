@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const NavigatorContainer = styled.nav`
-  width: 100vw;
+  width: 100%;
   height: 40px;
   background-color: white;
   display: flex;
@@ -20,9 +20,41 @@ export const NavigatorLogo = styled.span`
   font-weight: 800;
   transform: translate(0, -3px);
 
-  @media (max-width: 828px) {
+  @media (max-width: 835px) {
     .logo-text {
       display: none;
     }
+  }
+`;
+
+export const NavLinksContainer = styled.div`
+  display: flex;
+  align-items: center;
+  a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+`;
+
+export const UserActions = styled.div`
+  display: flex;
+  align-items: center;
+  span {
+    margin-right: 1rem;
+    font-weight: bold;
+  }
+  button {
+    background-color: #d61f3d;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
   }
 `;

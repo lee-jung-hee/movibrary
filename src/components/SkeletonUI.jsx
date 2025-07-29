@@ -1,6 +1,6 @@
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import { Container, SkeletonCardContainer } from "../styles/SkeletonStyle";
+import { Container, SkeletonCardContainer } from "../styles/Skeleton.styles";
 
 function SkeletonUI() {
   return (

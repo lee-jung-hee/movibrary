@@ -1,26 +1,52 @@
 import { Route, Routes } from "react-router-dom";
 import { lazy, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { useAuth } from "./supabase/auth/useAuth";
+import { setUser, clearUser, setLoading } from "./features/user/userSlice";
+import { fetchPopularMovie } from "./features/movie/movieThunk";
+import Layout from "./components/Layout";
+import PrivateRoute from "./components/PrivateRoute";
+
 const Main = lazy(() => import("./pages/Main"));
 const MovieDetail = lazy(() => import("./pages/MovieDetail"));
-
-import Layout from "./components/Layout";
-import { useDispatch } from "react-redux";
-import { fetchPopularMovie } from "./features/movie/movieThunk";
-import Search from "./pages/Search";
+const Search = lazy(() => import("./pages/Search"));
+const SignIn = lazy(() => import("./pages/SignIn"));
+const SignUp = lazy(() => import("./pages/SignUp"));
+const Profile = lazy(() => import("./components/Profile"));
 
 function App() {
   const dispatch = useDispatch();
+  const { getUserInfo } = useAuth();
 
   useEffect(() => {
+    const fetchUser = async () => {
+      dispatch(setLoading(true));
+      const userInfo = await getUserInfo();
+      if (userInfo && userInfo.user) {
+        dispatch(setUser(userInfo.user));
+      } else {
+        dispatch(clearUser());
+      }
+    };
+
+    fetchUser();
     dispatch(fetchPopularMovie());
-  }, []);
+  }, [dispatch, getUserInfo]);
 
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
+      <Route element={<Layout />}>
+        {/* 항상 접근 가능한 라우트 */}
         <Route index element={<Main />} />
         <Route path="/detail/:id" element={<MovieDetail />} />
         <Route path="/search" element={<Search />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
+
+        {/* 로그인이 필요한 라우트 */}
+        <Route element={<PrivateRoute />}>
+          <Route path="/profile" element={<Profile />} />
+        </Route>
       </Route>
     </Routes>
   );
