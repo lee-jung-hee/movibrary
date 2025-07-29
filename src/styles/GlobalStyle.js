@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+   
   }
 
   body {
@@ -47,6 +48,7 @@ const GlobalStyle = createGlobalStyle`
       background: none;
       border: none;
       outline: none;
+      box-sizing: border-box;
     }
 
     h1, h2, h3 {

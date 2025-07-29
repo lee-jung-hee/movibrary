@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import MovieCard from "../components/MovieCard";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import { SkeletonCardContainer, Container } from "../styles/SkeletonStyle";
+import { SkeletonCardContainer, Container } from "../styles/Skeleton.styles";
 
 function Main() {
   const { data, loading } = useSelector((state) => state.movie);
