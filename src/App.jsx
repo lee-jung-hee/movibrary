@@ -36,17 +36,11 @@ function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
-        {/* 항상 접근 가능한 라우트 */}
         <Route index element={<Main />} />
         <Route path="/detail/:id" element={<MovieDetail />} />
         <Route path="/search" element={<Search />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
-
-        {/* 로그인이 필요한 라우트 */}
-        <Route element={<PrivateRoute />}>
-          <Route path="/profile" element={<Profile />} />
-        </Route>
       </Route>
     </Routes>
   );

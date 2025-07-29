@@ -56,5 +56,6 @@ export const UserActions = styled.div`
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
+    margin-right: 1rem;
   }
 `;

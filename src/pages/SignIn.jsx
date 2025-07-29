@@ -23,7 +23,6 @@ function SignIn() {
   const handleSignIn = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setError("");
 
     try {
       const { user, error: loginError } = await login({ email, password });
@@ -32,11 +31,7 @@ function SignIn() {
       dispatch(setUser(user));
       navigate("/");
     } catch (err) {
-      if (err.message && err.message.includes("Invalid login credentials")) {
-        setError("Please check your email or password.");
-      } else {
-        setError(err.message || "An error occurred during login.");
-      }
+      setError("Please check your email or password.");
     } finally {
       setLoading(false);
     }
