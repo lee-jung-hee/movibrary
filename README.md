@@ -1,12 +1,23 @@
-# React + Vite
+# 🎬 Movibrary Movie List Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🛠 Tech Stack
 
-Currently, two official plugins are available:
+- React
+- Supabase
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📦 Libraries Used
 
-## Expanding the ESLint configuration
+- `react-icons`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📡 API Used
+
+- [TMDB API](https://www.themoviedb.org/documentation/api)
+
+## 📋 Features
+
+- Fetches **Popular Movies** from the TMDB API and displays them in a list view
+- Each movie links to a **detailed page** with more information
+- Implements **infinite scrolling** using **throttling** for performance
+- Includes **authentication**: users can view a **My Profile** page when logged in
+- Uses **styled-components** for styling the entire UI
+  <img width="1480" height="844" alt="image" src="https://github.com/user-attachments/assets/ad1fe01c-7096-4f58-bba4-1ce91e11be89" />
